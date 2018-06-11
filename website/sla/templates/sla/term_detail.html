@@ -1,0 +1,14 @@
+{# Load the tag library #}
+{% load bootstrap3 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+
+
+<h3>Details for Term ID: {{ term.id }} from SLA ID: {{ sla.id }} </h3>
+Term = {{ term.term }} <br>
+Operator  = {{ term.operator }} <br>
+Performance Level = {{ term.performanceLevel }} <br>
+Current Value = {{ term.currentValue }} <br>

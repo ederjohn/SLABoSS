@@ -1,0 +1,18 @@
+{# Load the tag library #}
+{% load bootstrap3 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+
+{% if all_slas %}
+    <h3>Showing All SLAs</h3>
+    <ul>
+        {% for sla in all_slas %}
+        <li><a href="{% url 'sla:detail' sla.id %}">{{ sla.description }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <h3>No SLAs saved.</h3>
+{% endif %}
